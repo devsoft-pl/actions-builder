@@ -22,7 +22,7 @@ RUN apt-get update &&\
     curl https://www.postgresql.org/media/keys/ACCC4CF8.asc &&\
     echo "deb https://apt.postgresql.org/pub/repos/apt/ bookworm-pgdg main" \
       > /etc/apt/sources.list.d/postgresql.list &&\
-    apt-get install --no-install-recommends -y build-essential gettext &&\
+    apt-get install --no-install-recommends -y build-essential gettext git &&\
     groupadd -f -g 1002 app &&\
     useradd -l -u 1002 -g app -d /app -r -m app &&\
     chown -R app:app /app &&\
